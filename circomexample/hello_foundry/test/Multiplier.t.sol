@@ -49,7 +49,7 @@ contract CounterTest is Test {
             if (entries[i].topics[0] == proved_event_signature) {
                 assertEq(
                     entries[i].topics[0],
-                    "sxa",
+                    proved_event_signature,
                     "emitted amount mismatch."
                 );
             }
