@@ -1,0 +1,15 @@
+2024-03-02 00:31:17,541 - LiveCapture - DEBUG - Creating Dumpcap subprocess with parameters: /opt/homebrew/bin/dumpcap -q -f tcp port 8000 -i lo0 -w -
+2024-03-02 00:31:17,543 - LiveCapture - DEBUG - Dumpcap subprocess (pid 29298) created
+2024-03-02 00:31:17,704 - LiveCapture - DEBUG - Creating TShark subprocess with parameters: /opt/homebrew/bin/tshark -l -n -T pdml -o ssl.keylog_file:/Users/gaetano/dev/zk-course/deco/server/sslkeys_google.log -i -
+2024-03-02 00:31:17,704 - LiveCapture - DEBUG - Executable: /opt/homebrew/bin/tshark
+2024-03-02 00:31:17,706 - LiveCapture - DEBUG - Capturing on 'Loopback: lo0'
+2024-03-02 00:31:17,706 - LiveCapture - DEBUG - File: -
+2024-03-02 00:31:17,706 - LiveCapture - DEBUG - TShark subprocess (pid 29312) created
+2024-03-02 00:31:17,810 - LiveCapture - DEBUG - ** (tshark:29312) 00:31:17.810221 [Epan WARNING] epan/prefs.c:5986 -- set_pref(): Preference "ssl.keylog_file" has been converted to "tls.keylog_file"
+2024-03-02 00:31:17,810 - LiveCapture - DEBUG - Save your preferences to make this change permanent.
+2024-03-02 00:31:17,867 - LiveCapture - DEBUG - Capturing on '-'
+2024-03-02 00:31:19,446 - LiveCapture - DEBUG - Cleanup Subprocess (pid 29312)
+2024-03-02 00:31:19,447 - LiveCapture - DEBUG - Packets captured: 0
+2024-03-02 00:31:19,447 - LiveCapture - DEBUG - Packets received/dropped on interface 'Loopback: lo0': 0/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (0.0%)
+2024-03-02 00:31:19,461 - LiveCapture - DEBUG - Cleanup Subprocess (pid 29298)
+2024-03-02 00:31:19,461 - LiveCapture - DEBUG - Cleanup Subprocess (pid 29312)
