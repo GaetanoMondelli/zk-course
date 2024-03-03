@@ -6,6 +6,139 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
+    Multiplier: {
+      address: "0xa82fF9aFd8f496c3d6ac40E2a0F282E47488CFc9",
+      abi: [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "bool",
+              name: "proved",
+              type: "bool",
+            },
+          ],
+          name: "Proved",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256[2]",
+              name: "_pA",
+              type: "uint256[2]",
+            },
+            {
+              internalType: "uint256[2][2]",
+              name: "_pB",
+              type: "uint256[2][2]",
+            },
+            {
+              internalType: "uint256[2]",
+              name: "_pC",
+              type: "uint256[2]",
+            },
+            {
+              internalType: "uint256[1]",
+              name: "_pubSignals",
+              type: "uint256[1]",
+            },
+          ],
+          name: "checkProof",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "last_proof",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "number",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_number",
+              type: "uint256",
+            },
+          ],
+          name: "setNumber",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bool",
+              name: "_proof",
+              type: "bool",
+            },
+          ],
+          name: "setProof",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256[2]",
+              name: "_pA",
+              type: "uint256[2]",
+            },
+            {
+              internalType: "uint256[2][2]",
+              name: "_pB",
+              type: "uint256[2][2]",
+            },
+            {
+              internalType: "uint256[2]",
+              name: "_pC",
+              type: "uint256[2]",
+            },
+            {
+              internalType: "uint256[1]",
+              name: "_pubSignals",
+              type: "uint256[1]",
+            },
+          ],
+          name: "verifyProof",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+    },
     YourContract: {
       address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
       abi: [
