@@ -7,6 +7,15 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
 ## Foundry
 
+`forge build` - compiles the contracts
+
+
+`npx ts-node deploy.ts` - deploys the contracts
+
+0x8c0Cd795a947b256C8e99fe9b6D82F1C3eCbd82e
+---
+
+
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
 Foundry consists of:
