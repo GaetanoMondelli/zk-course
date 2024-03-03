@@ -12,6 +12,14 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Create SSL context
 context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
 
+# Set the SSL context to use only TLS 1.2
+context.set_ciphers('AES128-SHA')
+context.options |= ssl.OP_NO_TLSv1
+context.options |= ssl.OP_NO_TLSv1_1
+context.options |= ssl.OP_NO_TLSv1_3
+context.options |= ssl.OP_NO_TICKET
+context.options |= ssl.OP_NO_COMPRESSION
+
 # Specify DH cipher suites
 # context.set_ciphers('ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA')
 
@@ -31,5 +39,6 @@ wrappedSocket.connect(('localhost', 8000))
 received_data = wrappedSocket.recv(1024)
 print("Received:", received_data)
 
+# wrappedSocket.shutdown(socket.SHUT_RDWR)
 # Close the connection
 wrappedSocket.close()

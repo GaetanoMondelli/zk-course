@@ -8,6 +8,17 @@ dh_params = 'keys/dhparam.pem'
 context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
 context.load_cert_chain(certfile='keys/cert.pem', keyfile='keys/key.pem')
 
+context.options |= ssl.OP_NO_TLSv1
+context.options |= ssl.OP_NO_TLSv1_1
+context.options |= ssl.OP_NO_TLSv1_3
+
+# Use a specific, simpler cipher suite for easier analysis
+context.set_ciphers('AES128-SHA')
+
+# Disable session resumption and compression for simplicity
+context.options |= ssl.OP_NO_TICKET
+context.options |= ssl.OP_NO_COMPRESSION
+
 # Specify DH parameters and DH cipher suites
 # context.set_ciphers('ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA')
 
